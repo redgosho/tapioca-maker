@@ -1,6 +1,35 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components'
 
+function Tapioca() {
+  return (
+        <Cup>
+            {/* カップの蓋 */}
+            <Cup__top></Cup__top>
+            {/* ストロー */}
+            <Straw></Straw>
+            <Straw__bottom></Straw__bottom>
+            {/* カップの中身 */}
+            <Cup__inner_wrap>
+            <Cup__inner_top></Cup__inner_top>
+            <Cup__inner>
+                <Tsubu_1></Tsubu_1>
+                <Tsubu_2></Tsubu_2>
+                <Tsubu_3></Tsubu_3>
+                <Tsubu_4></Tsubu_4>
+                <Tsubu_5></Tsubu_5>
+                <Tsubu_6></Tsubu_6>
+                <Tsubu_7></Tsubu_7>
+                <Tsubu_8></Tsubu_8>
+            </Cup__inner>
+            <Cup__inner_bottom></Cup__inner_bottom>
+            </Cup__inner_wrap>
+            {/* カップの底 */}
+            <Cup__bottom></Cup__bottom>
+        </Cup>
+  );
+}
+
 // css
 const Cup = styled.div`
   position: relative;
@@ -267,34 +296,5 @@ const Tsubu_8 = styled.div`
   left: 86px;
   animation: ${tsubu} 1.1s ease-in-out infinite alternate;
 `
-
-function Tapioca() {
-  return (
-        <Cup>
-            {/* カップの蓋 */}
-            <Cup__top></Cup__top>
-            {/* ストロー */}
-            <Straw></Straw>
-            <Straw__bottom></Straw__bottom>
-            {/* カップの中身 */}
-            <Cup__inner_wrap>
-            <Cup__inner_top></Cup__inner_top>
-            <Cup__inner>
-                <Tsubu_1></Tsubu_1>
-                <Tsubu_2></Tsubu_2>
-                <Tsubu_3></Tsubu_3>
-                <Tsubu_4></Tsubu_4>
-                <Tsubu_5></Tsubu_5>
-                <Tsubu_6></Tsubu_6>
-                <Tsubu_7></Tsubu_7>
-                <Tsubu_8></Tsubu_8>
-            </Cup__inner>
-            <Cup__inner_bottom></Cup__inner_bottom>
-            </Cup__inner_wrap>
-            {/* カップの底 */}
-            <Cup__bottom></Cup__bottom>
-        </Cup>
-  );
-}
 
 export default Tapioca;
