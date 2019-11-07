@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Tapioca from './Tapioca';
 
@@ -11,7 +9,7 @@ function Title() {
     <Body>
       <Tapioca />
       <InfoButton>
-        <InfoButton__i><FontAwesomeIcon icon={faCoffee} /></InfoButton__i>
+        <InfoButton__i><FontAwesomeIcon icon={['fas', 'info']} /></InfoButton__i>
       </InfoButton>
     </Body>
   );
