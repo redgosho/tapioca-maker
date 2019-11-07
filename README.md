@@ -13,4 +13,4 @@ reactでWebアプリケーションを開発します。
 あと今(2019/11/07)HOTらしい。
 SCSSは階層構造でCSSがかけてわかりやすくて好きなんだけど、挑戦の心は大事。
 CSSをファイルわけしなくていいので便利でいいなぁという印象。
-styled-components vs SASS (SCSS)(https://qiita.com/raviqqe/items/772ef45466f7d7dc7c11)という記事があった。
+[styled-components vs SASS (SCSS)][https://qiita.com/raviqqe/items/772ef45466f7d7dc7c11]という記事があった。
