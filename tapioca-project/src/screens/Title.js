@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+
 import Tapioca from './Tapioca';
 
 function Title() {
@@ -7,7 +11,7 @@ function Title() {
     <Body>
       <Tapioca />
       <InfoButton>
-        <InfoButton__i>i</InfoButton__i>
+        <InfoButton__i><FontAwesomeIcon icon={faCoffee} /></InfoButton__i>
       </InfoButton>
     </Body>
   );
