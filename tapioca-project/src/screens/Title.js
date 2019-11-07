@@ -7,10 +7,17 @@ import Tapioca from './Tapioca';
 function Title() {
   return (
     <Body>
-      <Tapioca />
-      <InfoButton>
-        <InfoButton__i><FontAwesomeIcon icon={['fas', 'info']} /></InfoButton__i>
-      </InfoButton>
+      <Main__area>
+        <Tapioca__area>
+          <Tapioca />
+        </Tapioca__area>
+        <Enter>いちぐち</Enter>
+        <IconButton__area>
+          <InfoButton>
+            <InfoButton__i><FontAwesomeIcon icon={['fas', 'info']} /></InfoButton__i>
+          </InfoButton>
+        </IconButton__area>
+      </Main__area>
     </Body>
   );
 }
@@ -18,6 +25,41 @@ function Title() {
 const Body = styled.div`
   height: 100vh;
   width: 100vw
+`
+const Main__area = styled.div`
+  display: block;
+  height: 100%;
+  background: rgba(255,0,0,0.5);
+  border: 1px solid #aaa;
+  position: relative;
+`
+const Tapioca__area = styled.div`
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+`
+
+const Enter = styled.button`
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: dashed 1px #67c5ff;
+  background: #f2fcff;
+  border-radius: 3px;
+  transition: .4s;
+  &:hover {
+    background: #cbedff;
+    color: #FFF;
+  }
+`
+const IconButton__area = styled.div`
+  text-align: center;
 `
 const InfoButton = styled.button`
   display: inline-block;
