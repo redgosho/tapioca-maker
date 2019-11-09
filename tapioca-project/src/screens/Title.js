@@ -14,7 +14,7 @@ function Title() {
         <Enter>いちぐち</Enter>
         <IconButton__area>
           <InfoButton>
-            <InfoButton__i><FontAwesomeIcon icon={['fas', 'info']} /></InfoButton__i>
+            <FontAwesomeIcon icon={['fas', 'info']} />
           </InfoButton>
         </IconButton__area>
       </Main__area>
@@ -81,9 +81,9 @@ const InfoButton = styled.button`
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
     border-bottom: none;
   }
-`
-const InfoButton__i = styled.i`
-  line-height: 80px;
+  i {
+    line-height: 80px;
+  }
 `
 
 export default Title;
