@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+// 画像読み込み
+import logo from '../img/logo.png';
+// コンポ読み込みs
 import Tapioca from './Tapioca';
 
 function Title() {
   return (
     <Body>
       <Main__area>
+        <LogoImage src={logo} />
         <Tapioca__area>
           <Tapioca />
         </Tapioca__area>
@@ -28,10 +31,19 @@ const Body = styled.div`
   height: 100vh;
   width: 100vw
 `
+const LogoImage = styled.img`
+  width: 300px;
+  // 縦中央寄せ
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateY(-70%) translateX(-50%);
+  -webkit- transform: translateY(-70%) translateX(-50%);
+`
 const Main__area = styled.div`
   display: block;
   height: 100%;
-  background: rgba(255,0,0,0.5);
+  background: rgba(255,0,0,0.3);
   border: 1px solid #aaa;
   position: relative;
   flex-direction: column;
