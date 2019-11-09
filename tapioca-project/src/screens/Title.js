@@ -53,6 +53,7 @@ const Enter = styled.button`
   background: #f2fcff;
   border-radius: 3px;
   transition: .4s;
+  outline:none;
   &:hover {
     background: #cbedff;
     color: #FFF;
@@ -77,6 +78,7 @@ const InfoButton = styled.button`
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
   box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
   border-bottom: solid 2px #b5b5b5;
+  outline:none;
   &:active {
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
     border-bottom: none;
