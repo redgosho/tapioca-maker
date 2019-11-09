@@ -67,14 +67,15 @@ const Enter__area = styled.div`
   -webkit- transform: translateY(-50%) translateX(-50%);
 `
 const Enter = styled.button`
+  font-family: "Hannari";
   display: inline-block;
   width: 200px;
   font-size: 20px;
   font-weight: bold;
   padding: 0.1em 1em;
   text-decoration: none;
-  color: #1e90ff;
-  border: dashed 3px #1e90ff;
+  color: #2e3740;
+  border: dashed 2px #2e3740;
   background: #f2fcff;
   border-radius: 3px;
   transition: .4s;
