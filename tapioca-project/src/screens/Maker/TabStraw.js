@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components'
-// コンポ読み込みs
+// コンポ読み込み
 import ColorPalette from './ColorPalette';
 
-function TabStrow() {
-  return (
-
-  );
+class TabStrow extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>やほ</h1>
+        <ColorPalette />
+      </div>
+    )
+  }
 }
 
-export default Tabs;
+export default TabStrow;

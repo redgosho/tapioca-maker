@@ -5,26 +5,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../img/logo.png';
 // コンポ読み込みs
 import Tapioca from '../Tapioca';
-import ColorPalette from './ColorPalette';
+import TabMenu from './TabMenu';
 
-function Title() {
-  return (
-    <Body>
-      <Main__area>
-        <Tapioca__area>
-          <LogoImage src={logo} />
-          <Tapioka__board>
-            <Tapioca />
-          </Tapioka__board>
-        </Tapioca__area>
-      </Main__area>
-      <Custom_area>
-        <Custom__borad>
-          <ColorPalette />
-        </Custom__borad>
-      </Custom_area>
-    </Body>
-  );
+class  Title extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <Body>
+        <Main__area>
+          <Tapioca__area>
+            <LogoImage src={logo} />
+            <Tapioka__board>
+              <Tapioca />
+            </Tapioka__board>
+          </Tapioca__area>
+        </Main__area>
+        <Custom_area>
+          <Custom__borad>
+            <TabMenu />
+          </Custom__borad>
+        </Custom_area>
+      </Body>
+    );
+  }
 }
 
 const Body = styled.div`

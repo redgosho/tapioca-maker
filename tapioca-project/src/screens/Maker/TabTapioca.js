@@ -1,12 +1,21 @@
 import React from 'react';
 import styled from 'styled-components'
-// コンポ読み込みs
+// コンポ読み込み
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ColorPalette from './ColorPalette';
 
-function TabTapioca() {
-  return (
-
-  );
+class TabTapioca extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  render() {
+    return (
+      <TabPanel>
+        <h1>やほ</h1>
+        <ColorPalette />
+      </TabPanel>
+    )
+  }
 }
 
-export default Tabs;
+export default TabTapioca;
