@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 // コンポ読み込み
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ColorPalette from './ColorPalette';
 
 class TabDrink extends React.Component {
@@ -10,10 +9,9 @@ class TabDrink extends React.Component {
   }
   render() {
     return (
-      <TabPanel>
-        <h1>やほ</h1>
-        <ColorPalette />
-      </TabPanel>
+      <div>
+
+      </div>
     )
   }
 }

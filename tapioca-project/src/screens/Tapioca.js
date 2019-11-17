@@ -1,33 +1,43 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components'
 
-function Tapioca() {
-  return (
-        <Cup>
-            {/* カップの蓋 */}
-            <Cup__top></Cup__top>
-            {/* ストロー */}
-            <Straw></Straw>
-            <Straw__bottom></Straw__bottom>
-            {/* カップの中身 */}
-            <Cup__inner_wrap>
-            <Cup__inner_top></Cup__inner_top>
-            <Cup__inner>
-                <Tsubu_1></Tsubu_1>
-                <Tsubu_2></Tsubu_2>
-                <Tsubu_3></Tsubu_3>
-                <Tsubu_4></Tsubu_4>
-                <Tsubu_5></Tsubu_5>
-                <Tsubu_6></Tsubu_6>
-                <Tsubu_7></Tsubu_7>
-                <Tsubu_8></Tsubu_8>
-            </Cup__inner>
-            <Cup__inner_bottom></Cup__inner_bottom>
-            </Cup__inner_wrap>
-            {/* カップの底 */}
-            <Cup__bottom></Cup__bottom>
-        </Cup>
-  );
+class Tapioca extends React.Component {
+  constructor(props) {
+    super(props)
+    // this.state = {
+    //   StrowColor: this.props.StrowColor,
+    //   DrinkColor: this.props.DrinkColor,
+    //   TapiocaColor: this.props.TapiocaColor
+    // }
+  }
+  render() {
+    return (
+      <Cup>
+          {/* カップの蓋 */}
+          <Cup__top></Cup__top>
+          {/* ストロー */}
+          <Straw color={this.props.StrowColor}></Straw>
+          <Straw__bottom color={this.props.StrowColor}></Straw__bottom>
+          {/* カップの中身 */}
+          <Cup__inner_wrap color={this.props.DrinkColor}>
+          <Cup__inner_top color={this.props.DrinkColor}></Cup__inner_top>
+          <Cup__inner color={this.props.DrinkColor}>
+              <Tsubu_1 color={this.props.TapiocaColor}></Tsubu_1>
+              <Tsubu_2 color={this.props.TapiocaColor}></Tsubu_2>
+              <Tsubu_3 color={this.props.TapiocaColor}></Tsubu_3>
+              <Tsubu_4 color={this.props.TapiocaColor}></Tsubu_4>
+              <Tsubu_5 color={this.props.TapiocaColor}></Tsubu_5>
+              <Tsubu_6 color={this.props.TapiocaColor}></Tsubu_6>
+              <Tsubu_7 color={this.props.TapiocaColor}></Tsubu_7>
+              <Tsubu_8 color={this.props.TapiocaColor}></Tsubu_8>
+          </Cup__inner>
+          <Cup__inner_bottom color={this.props.DrinkColor}></Cup__inner_bottom>
+          </Cup__inner_wrap>
+          {/* カップの底 */}
+          <Cup__bottom></Cup__bottom>
+      </Cup>
+);
+  }
 }
 
 // css
@@ -103,13 +113,13 @@ const Cup__inner_wrap = styled.div`
 const Cup__inner = styled.div`
   width: 110px;
   height: 150px;
-  background: #c49a6a;
+  background: ${props => props.color};
   margin-left: 45px;
   position: relative;
   z-index: 2;
   &::before {
     content: ' ';
-    border-right: 15px solid #c49a6a;
+    border-right: 15px solid ${props => props.color};
     border-bottom: 150px solid transparent;
     border-radius: 3px 0 0 0;
     position: absolute;
@@ -118,7 +128,7 @@ const Cup__inner = styled.div`
   }
   &::after {
     content: ' ';
-    border-left: 15px solid #c49a6a;
+    border-left: 15px solid ${props => props.color};
     border-bottom: 150px solid transparent;
     border-radius: 0 3px 0 0;
     position: absolute;
@@ -140,14 +150,14 @@ const Cup__inner_bottom = styled.div`
   width: 110px;
   height: 30px;
   border-radius: 55px / 15px;
-  background-color: #c49a6a;
+  background-color: ${props => props.color};
   z-index: 1;
   position: absolute;
   top: 134px;
   left: 45px;
 `
 const Straw = styled.div`
-  background: #ea5550;
+  background: ${props => props.color};
   width: 20px;
   height: 70px;
   z-index: 5;
@@ -158,7 +168,7 @@ const Straw = styled.div`
     content: ' ';
     width: 20px;
     height: 4px;
-    background-color: #ea5550;
+    background-color: ${props => props.color};
     border-radius: 10px / 2px;
     position: absolute;
     bottom: -2px;
@@ -167,7 +177,7 @@ const Straw = styled.div`
     content: ' ';
     width: 20px;
     height: 4px;
-    background-color: #ea5550;
+    background-color: ${props => props.color};
     border-radius: 10px / 2px;
     position: absolute;
     bottom: -2px;
@@ -176,7 +186,7 @@ const Straw = styled.div`
   }
 `
 const Straw__bottom = styled.div`
-  background: #ea5550;
+  background: ${props => props.color};
   width: 20px;
   height: 70px;
   z-index: 5;
@@ -191,7 +201,7 @@ const Straw__bottom = styled.div`
     content: ' ';
     width: 20px;
     height: 4px;
-    background-color: #ea5550;
+    background-color: ${props => props.color};
     border-radius: 10px / 2px;
     position: absolute;
     bottom: -2px;
@@ -200,7 +210,7 @@ const Straw__bottom = styled.div`
     content: ' ';
     width: 20px;
     height: 4px;
-    background-color: #ea5550;
+    background-color: ${props => props.color};
     border-radius: 10px / 2px;
     position: absolute;
     bottom: -2px;
@@ -221,7 +231,7 @@ const Tsubu_1 = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #000;
+  background: ${props => props.color};
   bottom: 4px;
   left: 5px;
   animation: ${tsubu} 1.2s ease-in-out infinite alternate;
@@ -231,7 +241,7 @@ const Tsubu_2 = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #000;
+  background: ${props => props.color};
   bottom: -5px;
   left: 28px;
   animation: ${tsubu} 0.5s ease-in-out infinite alternate;
@@ -241,7 +251,7 @@ const Tsubu_3 = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #000;
+  background: ${props => props.color};
   bottom: 2px;
   left: 55px;
   animation: ${tsubu} 1s ease-in-out infinite alternate;
@@ -251,7 +261,7 @@ const Tsubu_4 = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #000;
+  background: ${props => props.color};
   bottom: -2px;
   left: 81px;
   animation: ${tsubu} 0.6s ease-in-out infinite alternate;
@@ -261,7 +271,7 @@ const Tsubu_5 = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #000;
+  background: ${props => props.color};
   bottom: 34px;
   left: 2px;
   animation: ${tsubu} 0.8s ease-in-out infinite alternate;
@@ -271,7 +281,7 @@ const Tsubu_6 = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #000;
+  background: ${props => props.color};
   bottom: 25px;
   left: 30px;
   animation: ${tsubu} 0.7s ease-in-out infinite alternate;
@@ -281,7 +291,7 @@ const Tsubu_7 = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #000;
+  background: ${props => props.color};
   bottom: 32px;
   left: 61px;
   animation: ${tsubu} 0.9s ease-in-out infinite alternate;
@@ -291,7 +301,7 @@ const Tsubu_8 = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #000;
+  background: ${props => props.color};
   bottom: 24px;
   left: 86px;
   animation: ${tsubu} 1.1s ease-in-out infinite alternate;

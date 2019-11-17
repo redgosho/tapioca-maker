@@ -10,6 +10,11 @@ import TabMenu from './TabMenu';
 class  Title extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      StrowColor: '#ea5550',
+      DrinkColor: '#c49a6a',
+      TapiocaColor: '#000000'
+    }
   }
   render() {
     return (
@@ -18,13 +23,13 @@ class  Title extends React.Component {
           <Tapioca__area>
             <LogoImage src={logo} />
             <Tapioka__board>
-              <Tapioca />
+              <Tapioca StrowColor={this.state.StrowColor} DrinkColor={this.state.DrinkColor} TapiocaColor={this.state.TapiocaColor}/>
             </Tapioka__board>
           </Tapioca__area>
         </Main__area>
         <Custom_area>
           <Custom__borad>
-            <TabMenu />
+            <TabMenu StrowColor={this.state.StrowColor} DrinkColor={this.state.DrinkColor} TapiocaColor={this.state.TapiocaColor}/>
           </Custom__borad>
         </Custom_area>
       </Body>

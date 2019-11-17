@@ -2,46 +2,52 @@ import React from 'react';
 import styled from 'styled-components'
 // コンポ読み込み
 import TabStraw from './TabStraw';
-import TabDrink from './TabDrink';
-import TabTapioca from './TabTapioca';
+import TabDrink from './TabStraw';
+import TabTapioca from './TabStraw';
 
 const TAB_TYPES = {
-  HOME: 'home',
-  ABOUT: 'about',
-  OTHERS: 'others'
+  STRAW: 'STRAW',
+  DRINK: 'DRINK',
+  TAPIOCA: 'TAPIOCA'
 };
 
 const tabData = [
   {
-    text: 'Home',
-    type: TAB_TYPES.HOME
+    text: 'ストロー',
+    type: TAB_TYPES.STRAW
   },
   {
-    text: 'About',
-    type: TAB_TYPES.ABOUT
+    text: 'ドリンク',
+    type: TAB_TYPES.DRINK
   },
   {
-    text: 'Others',
-    type: TAB_TYPES.OTHERS
+    text: 'タピオカ',
+    type: TAB_TYPES.TAPIOCA
   }
 ];
 
-
 class TabMenu extends React.Component {
-  state = {
-    currentTabType: TAB_TYPES.HOME
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentTabType: TAB_TYPES.STRAW,
+      StrowColor: this.props.StrowColor,
+      DrinkColor: this.props.DrinkColor,
+      TapiocaColor: this.props.TapiocaColor
+    };
+  }
+
 
   changeTab = tabType => {
     this.setState({ currentTabType: tabType });
   }
 
   renderContents() {
-    if (this.state.currentTabType === TAB_TYPES.HOME) {
+    if (this.state.currentTabType === TAB_TYPES.STRAW) {
       return <TabStraw />;
-    } else if (this.state.currentTabType === TAB_TYPES.ABOUT) {
+    } else if (this.state.currentTabType === TAB_TYPES.DRINK) {
       return <TabDrink />;
-    } else if (this.state.currentTabType === TAB_TYPES.OTHERS) {
+    } else if (this.state.currentTabType === TAB_TYPES.TAPIOCA) {
       return <TabTapioca />;
     }
     return null;
@@ -64,10 +70,11 @@ class TabMenu extends React.Component {
 const Tabs = ({ currentTabType, tabData, onClick }) => (
   <TabCover>
     <ul>
-      {tabData.map(tab => (
+      {tabData.map((tab, index) => (
         <li
           className={currentTabType === tab.type ? 'active' : ''}
           onClick={() => onClick(tab.type)}
+          key={index}
         >
           {tab.text}
         </li>

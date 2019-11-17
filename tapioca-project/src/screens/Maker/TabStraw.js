@@ -9,12 +9,15 @@ class TabStrow extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Strow>
         <h1>やほ</h1>
         <ColorPalette />
-      </div>
+      </Strow>
     )
   }
 }
+const Strow = styled.div`
+  background: red;
+`
 
 export default TabStrow;
