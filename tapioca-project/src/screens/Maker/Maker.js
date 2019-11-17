@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // 画像読み込み
-import logo from '../img/logo.png';
+import logo from '../../img/logo.png';
 // コンポ読み込みs
-import Tapioca from './Tapioca';
+import Tapioca from '../Tapioca';
 import ColorPalette from './ColorPalette';
 
 function Title() {
@@ -12,6 +12,7 @@ function Title() {
     <Body>
       <Main__area>
         <Tapioca__area>
+          <LogoImage src={logo} />
           <Tapioka__board>
             <Tapioca />
           </Tapioka__board>
@@ -59,6 +60,15 @@ const Tapioca__area = styled.div`
   width: 100%;
   background: #CCFFFF;
   margin: auto;
+`
+const LogoImage = styled.img`
+  width: 300px;
+  // 縦中央寄せ
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateY(-70%) translateX(-50%);
+  -webkit- transform: translateY(-70%) translateX(-50%);
 `
 const Tapioka__board = styled.div`
   // 縦横中央寄せ
