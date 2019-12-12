@@ -4,13 +4,12 @@ import styled from 'styled-components'
 import ColorPalette from './ColorPalette';
 
 class TabDrink extends React.Component {
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
   render() {
     return (
       <Drink>
-        <h1>ドリンク</h1>
         <ColorPalette />
       </Drink>
     )
@@ -18,5 +17,6 @@ class TabDrink extends React.Component {
 }
 const Drink = styled.div`
   background: red;
+  height: 100%;
 `
 export default TabDrink;

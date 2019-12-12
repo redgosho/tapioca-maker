@@ -133,7 +133,7 @@ const ColorPalettes = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 50%;
+  height: 100vh;
 `
 const ColorPaletteLine = styled.div`
   display: flex;

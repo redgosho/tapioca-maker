@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 // コンポ読み込み
 import TabStraw from './TabStraw';
-import TabDrink from './TabStraw';
-import TabTapioca from './TabStraw';
+import TabDrink from './TabDrink';
+import TabTapioca from './TabTapioca';
 
 const TAB_TYPES = {
   STRAW: 'STRAW',
@@ -39,11 +39,12 @@ class TabMenu extends React.Component {
 
 
   changeTab = tabType => {
+    console.log('(changeTab)tabType:', tabType)
     this.setState({ currentTabType: tabType });
   }
 
   renderContents() {
-    console.log("renderContents")
+    console.log('(renderContents)this.state.currentTabType:', this.state.currentTabType)
     if (this.state.currentTabType === TAB_TYPES.STRAW) {
       return <TabStraw />;
     } else if (this.state.currentTabType === TAB_TYPES.DRINK) {
@@ -108,7 +109,7 @@ const TabCover = styled.div`
   }
 `
 const TabsContents = styled.div`
-  padding: 40px 40px 0;
+  // padding: 40px 40px 0;
   clear: both;
 `
 

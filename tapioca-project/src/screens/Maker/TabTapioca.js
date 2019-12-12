@@ -4,13 +4,12 @@ import styled from 'styled-components'
 import ColorPalette from './ColorPalette';
 
 class TabTapioca extends React.Component {
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
   render() {
     return (
       <Tapioca>
-        <h1>タピオカ</h1>
         <ColorPalette />
       </Tapioca>
     )

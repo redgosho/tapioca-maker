@@ -10,7 +10,6 @@ class TabStrow extends React.Component {
   render() {
     return (
       <Strow>
-        <h1>ストロー</h1>
         <ColorPalette />
       </Strow>
     )
