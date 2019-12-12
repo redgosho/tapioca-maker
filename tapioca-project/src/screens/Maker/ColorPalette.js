@@ -5,7 +5,7 @@ class ColorPalette extends React.Component {
   render() {
     return (
       <ColorPalettes>
-        <ColorPalette__2nd>
+        <ColorPaletteLine>
           <ColorButton color={"#ffebee"}></ColorButton>
           <ColorButton color={"#ffcdd2"}></ColorButton>
           <ColorButton color={"#ef9a9a"}></ColorButton>
@@ -16,8 +16,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#d32f2f"}></ColorButton>
           <ColorButton color={"#c62828"}></ColorButton>
           <ColorButton color={"#b71c1c"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#F3E5F5"}></ColorButton>
           <ColorButton color={"#E1BEE7"}></ColorButton>
           <ColorButton color={"#CE93D8"}></ColorButton>
@@ -28,8 +28,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#7B1FA2"}></ColorButton>
           <ColorButton color={"#6A1B9A"}></ColorButton>
           <ColorButton color={"#4A148C"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#E8EAF6"}></ColorButton>
           <ColorButton color={"#C5CAE9"}></ColorButton>
           <ColorButton color={"#9FA8DA"}></ColorButton>
@@ -40,8 +40,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#303F9F"}></ColorButton>
           <ColorButton color={"#283593"}></ColorButton>
           <ColorButton color={"#1A237E"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#E1F5FE"}></ColorButton>
           <ColorButton color={"#B3E5FC"}></ColorButton>
           <ColorButton color={"#81D4FA"}></ColorButton>
@@ -52,8 +52,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#0288D1"}></ColorButton>
           <ColorButton color={"#0277BD"}></ColorButton>
           <ColorButton color={"#01579B"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#E0F2F1"}></ColorButton>
           <ColorButton color={"#B2DFDB"}></ColorButton>
           <ColorButton color={"#80CBC4"}></ColorButton>
@@ -64,8 +64,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#00796B"}></ColorButton>
           <ColorButton color={"#00695C"}></ColorButton>
           <ColorButton color={"#004D40"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#F1F8E9"}></ColorButton>
           <ColorButton color={"#DCEDC8"}></ColorButton>
           <ColorButton color={"#C5E1A5"}></ColorButton>
@@ -76,8 +76,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#689F38"}></ColorButton>
           <ColorButton color={"#558B2F"}></ColorButton>
           <ColorButton color={"#33691E"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#FFFDE7"}></ColorButton>
           <ColorButton color={"#FFF9C4"}></ColorButton>
           <ColorButton color={"#FFF59D"}></ColorButton>
@@ -88,8 +88,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#FBC02D"}></ColorButton>
           <ColorButton color={"#F9A825"}></ColorButton>
           <ColorButton color={"#F57F17"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#FFF3E0"}></ColorButton>
           <ColorButton color={"#FFF3E0"}></ColorButton>
           <ColorButton color={"#FFE0B2"}></ColorButton>
@@ -100,8 +100,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#F57C00"}></ColorButton>
           <ColorButton color={"#EF6C00"}></ColorButton>
           <ColorButton color={"#E65100"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#EFEBE9"}></ColorButton>
           <ColorButton color={"#D7CCC8"}></ColorButton>
           <ColorButton color={"#BCAAA4"}></ColorButton>
@@ -112,8 +112,8 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#5D4037"}></ColorButton>
           <ColorButton color={"#4E342E"}></ColorButton>
           <ColorButton color={"#3E2723"}></ColorButton>
-        </ColorPalette__2nd>
-        <ColorPalette__2nd>
+        </ColorPaletteLine>
+        <ColorPaletteLine>
           <ColorButton color={"#ECEFF1"}></ColorButton>
           <ColorButton color={"#CFD8DC"}></ColorButton>
           <ColorButton color={"#B0BEC5"}></ColorButton>
@@ -124,7 +124,7 @@ class ColorPalette extends React.Component {
           <ColorButton color={"#455A64"}></ColorButton>
           <ColorButton color={"#37474F"}></ColorButton>
           <ColorButton color={"#263238"}></ColorButton>
-        </ColorPalette__2nd>
+        </ColorPaletteLine>
       </ColorPalettes>
     );
   }
@@ -135,7 +135,7 @@ const ColorPalettes = styled.div`
   width: 100%;
   height: 50%;
 `
-const ColorPalette__2nd = styled.div`
+const ColorPaletteLine = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;

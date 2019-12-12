@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // 画像読み込み
 import logo from '../../img/logo.png';
 // コンポ読み込みs
@@ -19,19 +19,19 @@ class  Title extends React.Component {
   render() {
     return (
       <Body>
-        <Main__area>
-          <Tapioca__area>
+        <MainArea>
+          <TapiocaArea>
             <LogoImage src={logo} />
-            <Tapioka__board>
+            <TapiokaBoard>
               <Tapioca StrowColor={this.state.StrowColor} DrinkColor={this.state.DrinkColor} TapiocaColor={this.state.TapiocaColor}/>
-            </Tapioka__board>
-          </Tapioca__area>
-        </Main__area>
-        <Custom_area>
-          <Custom__borad>
+            </TapiokaBoard>
+          </TapiocaArea>
+        </MainArea>
+        <CustomArea>
+          <CustomBorad>
             <TabMenu StrowColor={this.state.StrowColor} DrinkColor={this.state.DrinkColor} TapiocaColor={this.state.TapiocaColor}/>
-          </Custom__borad>
-        </Custom_area>
+          </CustomBorad>
+        </CustomArea>
       </Body>
     );
   }
@@ -57,14 +57,14 @@ const Body = styled.div`
     #d09352 1%
   );
 `
-const Main__area = styled.div`
+const MainArea = styled.div`
   display: block;
   height: 100%;
   width: 50%;
   position: relative;
   flex-direction: column;
 `
-const Tapioca__area = styled.div`
+const TapiocaArea = styled.div`
   display: block;
   height: 100%;
   width: 100%;
@@ -80,7 +80,7 @@ const LogoImage = styled.img`
   transform: translateY(-70%) translateX(-50%);
   -webkit- transform: translateY(-70%) translateX(-50%);
 `
-const Tapioka__board = styled.div`
+const TapiokaBoard = styled.div`
   // 縦横中央寄せ
   position: absolute;
   top: 50%;
@@ -88,14 +88,14 @@ const Tapioka__board = styled.div`
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
 `
-const Custom_area = styled.div`
+const CustomArea = styled.div`
   position: relative;
   width: 50%;
   height: 100%;
   float: left;
   background: linear-gradient(#ccc, #fff);
 `
-const Custom__borad = styled.div`
+const CustomBorad = styled.div`
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   position: absolute;

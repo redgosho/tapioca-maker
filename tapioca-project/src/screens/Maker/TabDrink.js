@@ -9,11 +9,14 @@ class TabDrink extends React.Component {
   }
   render() {
     return (
-      <div>
-
-      </div>
+      <Drink>
+        <h1>ドリンク</h1>
+        <ColorPalette />
+      </Drink>
     )
   }
 }
-
+const Drink = styled.div`
+  background: red;
+`
 export default TabDrink;

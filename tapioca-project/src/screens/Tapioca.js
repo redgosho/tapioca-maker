@@ -2,39 +2,39 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components'
 
 class Tapioca extends React.Component {
-  constructor(props) {
-    super(props)
-    // this.state = {
-    //   StrowColor: this.props.StrowColor,
-    //   DrinkColor: this.props.DrinkColor,
-    //   TapiocaColor: this.props.TapiocaColor
-    // }
-  }
+  // constructor(props) {
+  //   super(props)
+  //   // this.state = {
+  //   //   StrowColor: this.props.StrowColor,
+  //   //   DrinkColor: this.props.DrinkColor,
+  //   //   TapiocaColor: this.props.TapiocaColor
+  //   // }
+  // }
   render() {
     return (
       <Cup>
           {/* カップの蓋 */}
-          <Cup__top></Cup__top>
+          <CupTdop></CupTdop>
           {/* ストロー */}
           <Straw color={this.props.StrowColor}></Straw>
-          <Straw__bottom color={this.props.StrowColor}></Straw__bottom>
+          <StrawBottom color={this.props.StrowColor}></StrawBottom>
           {/* カップの中身 */}
-          <Cup__inner_wrap color={this.props.DrinkColor}>
-          <Cup__inner_top color={this.props.DrinkColor}></Cup__inner_top>
-          <Cup__inner color={this.props.DrinkColor}>
-              <Tsubu_1 color={this.props.TapiocaColor}></Tsubu_1>
-              <Tsubu_2 color={this.props.TapiocaColor}></Tsubu_2>
-              <Tsubu_3 color={this.props.TapiocaColor}></Tsubu_3>
-              <Tsubu_4 color={this.props.TapiocaColor}></Tsubu_4>
-              <Tsubu_5 color={this.props.TapiocaColor}></Tsubu_5>
-              <Tsubu_6 color={this.props.TapiocaColor}></Tsubu_6>
-              <Tsubu_7 color={this.props.TapiocaColor}></Tsubu_7>
-              <Tsubu_8 color={this.props.TapiocaColor}></Tsubu_8>
-          </Cup__inner>
-          <Cup__inner_bottom color={this.props.DrinkColor}></Cup__inner_bottom>
-          </Cup__inner_wrap>
+          <CupInnerWrap color={this.props.DrinkColor}>
+          <CupInnerTop color={this.props.DrinkColor}></CupInnerTop>
+          <CupInner color={this.props.DrinkColor}>
+              <Tsubu1 color={this.props.TapiocaColor}></Tsubu1>
+              <Tsubu2 color={this.props.TapiocaColor}></Tsubu2>
+              <Tsubu3 color={this.props.TapiocaColor}></Tsubu3>
+              <Tsubu4 color={this.props.TapiocaColor}></Tsubu4>
+              <Tsubu5 color={this.props.TapiocaColor}></Tsubu5>
+              <Tsubu6 color={this.props.TapiocaColor}></Tsubu6>
+              <Tsubu7 color={this.props.TapiocaColor}></Tsubu7>
+              <Tsubu8 color={this.props.TapiocaColor}></Tsubu8>
+          </CupInner>
+          <CupInnerBottom color={this.props.DrinkColor}></CupInnerBottom>
+          </CupInnerWrap>
           {/* カップの底 */}
-          <Cup__bottom></Cup__bottom>
+          <CupBottom></CupBottom>
       </Cup>
 );
   }
@@ -65,7 +65,7 @@ const Cup = styled.div`
     right: -20px;
   }
 `
-const Cup__bottom = styled.div`
+const CupBottom = styled.div`
 width: 120px;
 height: 40px;
 border-radius: 60px / 20px;
@@ -74,7 +74,7 @@ position: absolute;
 bottom: -20px;
 left: 0;
 `
-const Cup__top = styled.div`
+const CupTdop = styled.div`
   width: 170px;
   height: 30px;
   border-radius: 85px / 15px;
@@ -105,12 +105,12 @@ const Cup__top = styled.div`
     position: absolute;
   }
 `
-const Cup__inner_wrap = styled.div`
+const CupInnerWrap = styled.div`
   position: absolute;
   bottom: 0;
   left: -40px;
 `
-const Cup__inner = styled.div`
+const CupInner = styled.div`
   width: 110px;
   height: 150px;
   background: ${props => props.color};
@@ -136,7 +136,7 @@ const Cup__inner = styled.div`
     right: -15px;
   }
 `
-const Cup__inner_top = styled.div`
+const CupInnerTop = styled.div`
   width: 140px;
   height: 30px;
   background-color: #deb887;
@@ -146,7 +146,7 @@ const Cup__inner_top = styled.div`
   top: -12px;
   left: 30px;
 `
-const Cup__inner_bottom = styled.div`
+const CupInnerBottom = styled.div`
   width: 110px;
   height: 30px;
   border-radius: 55px / 15px;
@@ -185,7 +185,7 @@ const Straw = styled.div`
     top: -2px;
   }
 `
-const Straw__bottom = styled.div`
+const StrawBottom = styled.div`
   background: ${props => props.color};
   width: 20px;
   height: 70px;
@@ -226,7 +226,7 @@ to {
   transform: translateY(3px);
 }
 `;
-const Tsubu_1 = styled.div`
+const Tsubu1 = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
@@ -236,7 +236,7 @@ const Tsubu_1 = styled.div`
   left: 5px;
   animation: ${tsubu} 1.2s ease-in-out infinite alternate;
 `
-const Tsubu_2 = styled.div`
+const Tsubu2 = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
@@ -246,7 +246,7 @@ const Tsubu_2 = styled.div`
   left: 28px;
   animation: ${tsubu} 0.5s ease-in-out infinite alternate;
 `
-const Tsubu_3 = styled.div`
+const Tsubu3 = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
@@ -256,7 +256,7 @@ const Tsubu_3 = styled.div`
   left: 55px;
   animation: ${tsubu} 1s ease-in-out infinite alternate;
 `
-const Tsubu_4 = styled.div`
+const Tsubu4 = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
@@ -266,7 +266,7 @@ const Tsubu_4 = styled.div`
   left: 81px;
   animation: ${tsubu} 0.6s ease-in-out infinite alternate;
 `
-const Tsubu_5 = styled.div`
+const Tsubu5 = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
@@ -276,7 +276,7 @@ const Tsubu_5 = styled.div`
   left: 2px;
   animation: ${tsubu} 0.8s ease-in-out infinite alternate;
 `
-const Tsubu_6 = styled.div`
+const Tsubu6 = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
@@ -286,7 +286,7 @@ const Tsubu_6 = styled.div`
   left: 30px;
   animation: ${tsubu} 0.7s ease-in-out infinite alternate;
 `
-const Tsubu_7 = styled.div`
+const Tsubu7 = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
@@ -296,7 +296,7 @@ const Tsubu_7 = styled.div`
   left: 61px;
   animation: ${tsubu} 0.9s ease-in-out infinite alternate;
 `
-const Tsubu_8 = styled.div`
+const Tsubu8 = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;

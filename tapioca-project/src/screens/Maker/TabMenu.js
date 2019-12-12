@@ -43,6 +43,7 @@ class TabMenu extends React.Component {
   }
 
   renderContents() {
+    console.log("renderContents")
     if (this.state.currentTabType === TAB_TYPES.STRAW) {
       return <TabStraw />;
     } else if (this.state.currentTabType === TAB_TYPES.DRINK) {

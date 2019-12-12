@@ -4,13 +4,13 @@ import styled from 'styled-components'
 import ColorPalette from './ColorPalette';
 
 class TabStrow extends React.Component {
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
   render() {
     return (
       <Strow>
-        <h1>やほ</h1>
+        <h1>ストロー</h1>
         <ColorPalette />
       </Strow>
     )

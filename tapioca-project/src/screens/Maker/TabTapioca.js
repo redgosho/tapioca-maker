@@ -9,11 +9,15 @@ class TabTapioca extends React.Component {
   }
   render() {
     return (
-      <div>
-
-      </div>
+      <Tapioca>
+        <h1>タピオカ</h1>
+        <ColorPalette />
+      </Tapioca>
     )
   }
 }
+const Tapioca = styled.div`
+  background: green;
+`
 
 export default TabTapioca;
